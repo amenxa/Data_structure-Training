@@ -1,0 +1,27 @@
+
+public static Node rotateLeft(Node head, int k) {
+        //to find tail and length of linked list
+        int len = 1;
+        Node tail = head;
+        while (tail.next != null) {
+            tail = tail.next;
+            len++;
+        }
+
+        k = k % len;
+        if (k == 0) {
+            return head;
+        }
+
+        Node curr = head;
+        while (--k > 0) {
+            curr = curr.next;
+        }
+
+        Node newHead = curr.next;
+        tail.next = head;
+        curr.next = null;
+
+        return newHead;
+
+    }
