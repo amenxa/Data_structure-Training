@@ -17,5 +17,9 @@ public class Companyy {
     public static void main(String[] args) {
         // TODO code application logic here
     }
+
+        public static void testFun(String[] args) {
+        // TODO code application logic here
+    }
     
 }
